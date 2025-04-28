@@ -312,6 +312,97 @@ h3 {
     text-align: center;
     font-size: 35px;
 }
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Reducer afstanden mellem elementerne */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
+.contact-text {
+    max-width: 500px;
+    margin-left: 60px;  /* Tilføj margin til venstre side af teksten */
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 69px;
+    background-color: #c0c0c0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Gør det muligt at bruge absolute positionering af knappen */
+}
 
+.contact-form h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
 
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding-right: 20px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    position: absolute;  /* Placer knappen absolut i forhold til formularen */
+    bottom: 25px;  /* Afstand fra bunden */
+    right: 20px;  /* Afstand fra højre */
+    padding: 12px 20px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e8652a;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form h1 {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+.contact-kryb span {
+font-size: 20px;  /* Størrelse på teksten */
+    font-weight: bolder;  /* Gør teksten fed */
+    color: #000000;  /* Farve på teksten */
+}
