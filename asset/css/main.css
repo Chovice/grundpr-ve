@@ -28,14 +28,30 @@ header {
 .left {
     display: flex;
     align-items: center;
+    position: relative;  /* Gør det muligt at placere ikonet indenfor input-feltet */
+    margin-top: 20px;  /* Juster denne værdi for at flytte søgefeltet længere ned */
 }
 
 .left input {
-  
-    font-size: 14px;
+    font-size: 35px;
+    
+    width: 200px;
+    padding-left: 40px;  /* Plads til ikon på venstre side */
+    border: none;  /* Fjern borderen */
+}
+.left input:focus {
+    outline: none;  /* Fjern fokus-randen, der vises når man skriver */
+    border: none;   /* Fjern eventuel border ved fokus */
+}
 
-    border-radius: 4px;
-    width: 150px;
+.search-icon {
+    position: absolute;
+    left: 10px;  /* Placer ikonet lidt til venstre */
+    top: 50%;
+    transform: translateY(-50%);  /* Center ikonet vertikalt */
+    font-size: 25px;  /* Gør ikonet lidt større */
+    color: #000;  /* Farven på ikonet */
+    pointer-events: none;  /* Sørger for, at ikonet ikke forstyrrer brugerens input */
 }
 
 /* Søge-emoji */
@@ -46,12 +62,14 @@ header {
 
 /* Logo i midten */
 .center {
+    margin-top: 45px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .center img {
+    
     height: 50px; /* Tilpas efter behov */
 }
 
@@ -67,7 +85,7 @@ header {
     text-decoration: none;
     color: black;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 19px;
 }
 
 /* Anden række: Kurv */
@@ -88,7 +106,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 88.8vh;
+    height: 88vh;
 }
 /* Responsivt design */
 @media screen and (max-width: 768px) {
@@ -167,6 +185,9 @@ header {
 .products {
     text-align: center;
 }
+.products h1{
+    font-size: 35px;  /* Størrelse på overskriften */
+}
 
 .product-grid {
     display: grid;
@@ -208,8 +229,89 @@ header {
 
 .price {
     margin-top: 5px;  /* Lidt afstand mellem tekst og pris */
-    font-size: 16px;  /* Størrelse på prisen */
+    font-size: 25px;  /* Størrelse på prisen */
     font-weight: bold;  /* Gør prisen fed */
     color: #333;  /* Farve på prisen */
 }
+h3 {
+    font-size: 24px;  /* Størrelse på overskriften */
+    margin-bottom: 20px;  /* Lidt afstand under overskriften */
+    color: #333;  /* Farve på overskriften */
+    text-align: center;  /* Centerer overskriften */
+}
+.about-kryb {
+    display: flex;  /* Placerer billedet og teksten i en række */
+    justify-content: space-between;  /* Sørger for, at de er på hver sin side */
+    align-items: flex-start;  /* Juster dem, så de starter fra toppen */
+}
+
+.about-kryb img {
+    max-width: 300px;  /* Sætter en maksimal bredde på billedet */
+    height: auto;  /* Bevarer proportionerne på billedet */
+    margin-left: 20px;  /* Tilføj afstand til venstre for billedet */
+    border-radius: 8px;  /* Afrundede hjørner (valgfrit) */
+}
+
+.about-kryb p {
+    margin-right: 20px;  /* Afstand til højre for teksten */
+}
+.about-kryb span {
+    font-weight: bold;  /* Gør teksten fed */
+    color: #000000;  /* Farve på teksten */
+}
+.om-kryb h1 {
+    font-size: 35px;  /* Størrelse på overskriften */
+    margin-bottom: 20px;  /* Lidt afstand under overskriften */
+    color: #333;  /* Farve på overskriften */
+    text-align: center;  /* Centerer overskriften */
+}
+.image-slider {
+    display: flex;
+    align-items: center; /* Vertikal centrering af elementer */
+    justify-content: center; /* Centrerer hele slideren */
+    position: relative; /* For at placere pilene i forhold til billedcontaineren */
+}
+
+.images {
+    display: flex; /* For at få billederne til at være på en linje */
+    gap: 10px; /* Afstand mellem billederne */
+}
+
+.arrow {
+    background-color: #f0f0f0; /* Lysegrå baggrund */
+    border: 2px solid #ccc; /* Let kant rundt om pilen */
+    border-radius: 50%; /* Gør pilene runde */
+    font-size: 40px; /* Størrelse på pilene */
+    color: #333; /* Mørk tekstfarve (for pilen) */
+    cursor: pointer;
+    position: absolute; /* For at placere pilene på hver side af billedcontaineren */
+    top: 50%; /* Centrer pilene vertikalt */
+    transform: translateY(-50%); /* For at justere, så de er præcist midt i containeren */
+    padding: 10px; /* Justeret indvendig afstand for at gøre pilen mindre */
+    transition: background-color 0.3s, transform 0.3s; /* Blød overgang ved hover */
+    font-weight: bold; /* Gør pilene lidt federe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover-effekt for pilene */
+.arrow:hover {
+    background-color: #e0e0e0; /* Ændrer baggrundsfarven ved hover */
+    transform: translateY(-50%) scale(1.1); /* Forstørrer pilen lidt ved hover */
+}
+
+.left {
+    left: 200px; /* Placer venstre pil tættere på venstre kant af billedcontaineren */
+}
+
+.right {
+    right: 200px; /* Placer højre pil tættere på højre kant af billedcontaineren */
+}
+.OPSKRIFTER h1{
+    text-align: center;
+    font-size: 35px;
+}
+
+
 

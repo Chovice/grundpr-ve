@@ -15,15 +15,15 @@
 <body>
     <header class="header">
         <div class="top-row">
-          <div class="left">
-            <span>🔍</span>
-            <input type="text" placeholder="SØG">
+            <div class="left">
+              <input type="text" placeholder="SØG">
+              <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> <!-- Magnifying glass icon -->
+            </div>
+            
+            <div class="center">
+              <img src="/asset/images/logo_small_black.png" alt="KRYB Logo">
+            </div>
           </div>
-      
-          <div class="center">
-            <img src="/asset/images/logo_small_black.png" alt="KRYB Logo">
-          </div>
-        </div>
       
         <div class="bottom-row">
           <nav class="nav-links">
@@ -90,7 +90,35 @@
             </div>
         </div>
     </section>
+    <section class="om-kryb">
+        <h1>OM KRYB</h1>
     
+        <figure class="about-kryb">
+            <figcaption>
+                <p>Uanset hvor vi arbejder i <span>KRYB</span>, så deler vi de samme Værdier og den samme mission om at skabe livsglæde gennem måltidet.</p>
+                <p><span>KRYB</span> sigter mod at dele lækre, sunde, insektbaserede snacks, uden at gå på kompromis med smag og duft.</p>
+                <p>vores sortiment har lokalt fremstillede ingredienser i deres mest naturlige form for at skabe inspirerede snaks, hvor alt er lavet 100% af os selv.</p>
+                <p>vi er lidenskavelige med at tilbyde vores kunder velsmagende og nærende snacks lavet af sunde ingredienser, der har en positiv indvirkning på krop og sjæl.</p>
+                <p>hos <span>KRYB</span> er vores mål simpelt - at omdefinere hvad det betyder at spise godt.</p>
+                <p>Vi er forpligtede til at opretholde en bæredygtig og sund livsstil og aktivt bidrage til at sænke vores CO2-fodaftryk og bevare vores planets vandforsyning gennem vores sortiment, opmærksomme ingrediensopbøb og miljøvenlige emballage</p>
+                <p>Spis Godt. Spis med formål. Spis <span>KRYB</span></p>
+                <p>Læs mere om <span>KRYB</span> her >>></p>
+        </figcaption>
+            <img src="/asset/images/restaurant.jpg" alt="">
+        </figure>
+    </section>
+    <section class="OPSKRIFTER">
+        <h1>OPSKRIFTER</h1>
+        <div class="image-slider">
+            <button class="arrow left" onclick="changeImages(-1)">&#60;</button> <!-- Venstre pil -->
+            <div class="images">
+                <img src="/asset/images/Image 01.png" alt="Billede 1" id="image1">
+                <img src="/asset/images/Instagram_02.jpg" alt="Billede 2" id="image2">
+                <img src="/asset/images/Instagram_03.jpg" alt="Billede 3" id="image3">
+            </div>
+            <button class="arrow right" onclick="changeImages(1)">&#62;</button> <!-- Højre pil -->
+        </div>
+    </section>
     
     
       
