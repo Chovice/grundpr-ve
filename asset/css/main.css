@@ -12,3 +12,158 @@
     --Black-dark: #444444;
     --black-light: #999999;
 }
+/* Standard styling for hele body */
+body {
+  
+}
+header {
+    background-color: #cecccc; 
+}
+/* Øverste område med søgefelt og logo (grå baggrund) */
+.top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Søgefelt venstre */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left input {
+  
+    font-size: 14px;
+
+    border-radius: 4px;
+    width: 150px;
+}
+
+/* Søge-emoji */
+.left span {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Logo i midten */
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center img {
+    height: 50px; /* Tilpas efter behov */
+}
+
+/* Navigation (grå baggrund) */
+.nav-links {
+    display: flex;
+    gap: 20px;
+ 
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Anden række: Kurv */
+.bottom-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Kurv højre */
+.cart {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 88.8vh;
+}
+/* Responsivt design */
+@media screen and (max-width: 768px) {
+    .top-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .center {
+        position: relative;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .center img {
+        height: 40px; /* Juster logoets størrelse på mindre skærme */
+    }
+
+    .bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Forøg skrifttypestørrelsen på små skærme */
+    }
+
+    .cart {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+/* Tablet responsivitet */
+@media screen and (max-width: 1024px) {
+    .top-row {
+        flex-direction: column;
+    }
+
+    .left input {
+        width: 100%;
+    }
+
+    .center img {
+        height: 45px;
+    }
+
+    .bottom-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .cart {
+        font-size: 19px;
+    }
+}
