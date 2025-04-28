@@ -164,3 +164,52 @@ header {
         font-size: 19px;
     }
 }
+.products {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 kolonner */
+    grid-template-rows: repeat(2, auto);  /* 2 rækker */
+    gap: 10px;  /* Afstand mellem billederne */
+    max-width: 900px;  /* Sæt en maksimal bredde for gridet */
+    margin: 0 auto;  /* Center gridet */
+}
+
+.product-item {
+    text-align: center;  /* Centerer både billede og tekst */
+}
+
+.product-item img {
+    width: 100%;  /* Gør billederne responsive */
+    height: auto;  /* Bevarer billedernes proportioner */
+    max-width: 110px;  /* Sætter en maksimal bredde for billederne */
+    margin: 0 auto;  /* Centerer billederne i deres celler */
+    border-radius: 8px; /* Afrundede hjørner (valgfrit) */
+}
+
+.product-text {
+    margin-top: 10px;  /* Lidt afstand mellem billede og tekst */
+    font-size: 14px;  /* Størrelse på produktbeskrivelsen */
+    color: #808080;  /* Farve på teksten */
+    font-weight: normal;  /* Teksten er ikke fed */
+}
+.product-kurv {
+    background-color: #cecccc;  /* Grå baggrund for kurv-knappen */
+    margin-top: 5px;  /* Lidt afstand mellem tekst og kurv-knap */
+    padding: 5px 15px;  /* Indvendig afstand i knappen, justeret for at gøre knappen mindre */
+    font-size: 14px;  /* Størrelse på produktbeskrivelsen */
+    font-weight: normal;  /* Teksten er ikke fed */
+    display: inline-block;  /* Sørger for, at knappen kun er så bred som teksten */
+    border-radius: 5px;  /* Afrundede hjørner (valgfrit) */
+    cursor: pointer;  /* Gør det tydeligt, at knappen er klikbar */
+}
+
+.price {
+    margin-top: 5px;  /* Lidt afstand mellem tekst og pris */
+    font-size: 16px;  /* Størrelse på prisen */
+    font-weight: bold;  /* Gør prisen fed */
+    color: #333;  /* Farve på prisen */
+}
+
