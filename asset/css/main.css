@@ -26,10 +26,10 @@ header {
 
 /* Søgefelt venstre */
 .left {
-    display: flex;
-    align-items: center;
-    position: relative;  /* Gør det muligt at placere ikonet indenfor input-feltet */
+    
+   
     margin-top: 20px;  /* Juster denne værdi for at flytte søgefeltet længere ned */
+    
 }
 
 .left input {
@@ -46,19 +46,14 @@ header {
 
 .search-icon {
     position: absolute;
-    left: 10px;  /* Placer ikonet lidt til venstre */
-    top: 50%;
+    left: 5px;  /* Placer ikonet lidt til venstre */
+    top: 65%;
     transform: translateY(-50%);  /* Center ikonet vertikalt */
     font-size: 25px;  /* Gør ikonet lidt større */
     color: #000;  /* Farven på ikonet */
     pointer-events: none;  /* Sørger for, at ikonet ikke forstyrrer brugerens input */
 }
 
-/* Søge-emoji */
-.left span {
-    margin-right: 10px;
-    font-size: 18px;
-}
 
 /* Logo i midten */
 .center {
