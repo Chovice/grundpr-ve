@@ -77,12 +77,32 @@ header {
 }
 
 .nav-links a {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-size: 19px;
+    transition: color 0.3s ease;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;  /* orange linje */
+    transition: width 0.3s ease;
 }
 
+.nav-links a:hover {
+    color: #ffffff;  /* farveskift ved hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
 /* Anden række: Kurv */
 .bottom-row {
     margin-top: 20px;
@@ -90,18 +110,42 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+}
+.contact {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
 /* Kurv højre */
 .cart {
     font-size: 20px;
     margin-right: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+.cart:hover {
+    animation: shake 0.4s;
+    color: #ffffff;
 }
 #background {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    height: 88vh;
+    overflow: hidden;
+}
+#background img {
+    width: 100%;
+    height: auto; /* Gør, at billedet skalerer proportionalt */
+    display: block; /* Fjerner uønsket hvid kant under billedet */
 }
 /* Responsivt design */
 @media screen and (max-width: 768px) {
@@ -137,9 +181,15 @@ header {
     }
 
     .nav-links a {
-        font-size: 16px; /* Forøg skrifttypestørrelsen på små skærme */
+        color: black;
+        font-weight: 500;
+        font-size: 19px;
+        transition: all 0.3s ease;
     }
-
+.nav-links a:hover {
+    color: #ff7c35;
+    transform: translateY(-2px);
+}
     .cart {
         font-size: 18px;
         margin-top: 10px;

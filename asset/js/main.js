@@ -18,3 +18,30 @@ function toggleMenu() {
           images[i].src = imageSources[currentIndex][i];
       }
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+  
+    form.addEventListener('submit', function (e) {
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+  
+      // Simpel email-regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if (!name || !email || !message) {
+        alert("Alle felter skal udfyldes.");
+        e.preventDefault();
+        return;
+      }
+  
+      if (!emailRegex.test(email)) {
+        alert("Indtast en gyldig emailadresse.");
+        e.preventDefault();
+        return;
+      }
+  
+      alert("Tak for din besked!");
+    });
+  });
